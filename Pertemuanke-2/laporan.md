@@ -15,7 +15,10 @@
 
 # Percobaan 1 : Deklarasi Class, Atribut dan Method
 
-![alt text](image.png)
+Ini adalah hasil kode programnya<br> 
+![alt text](image.png)<br>
+Output kode program tersebut adalah error dan cocok dengan gambar berikut<br>
+![alt text](image-9.png)
 
 ## Pertanyaan
 1. Sebutkan dua karakteristik class atau object!<br>
@@ -41,6 +44,7 @@ Jawab : menurut saya method restock() memiliki satu parameter berupa bilangan in
 
 # Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
 
+Ini adalah hasil dari kode programnya
 ![alt text](image-2.png)
 <br>
 
@@ -78,7 +82,7 @@ secara berurutan? Jelaskan alasannya!<br>
 Jawab : Tidak, method di dalam class Buku tidak harus diakses secara berurutan karena setiap method dalam class Buku dapat dipanggil secara terpisah sesuai dengan kebutuhan program dan tidak ada ketergantungan urutan antara pemanggilan method-method tersebut.
 5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor 
 berparameter dari class Buku!<br>
-Jawab : ![alt text](image-7.png)
+Jawab : ![alt text](image-8.png)
 6. Commit dan push kode program ke Github<br>
 
 # Latihan Praktikum
