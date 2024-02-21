@@ -13,7 +13,7 @@
 <p align = "center"> Kelas: 1B </p>
 <br><br><br><br><br>
 
-## Percobaan 1 : Deklarasi Class, Atribut dan Method
+# Percobaan 1 : Deklarasi Class, Atribut dan Method
 
 ![alt text](image.png)
 
@@ -39,7 +39,7 @@ Jawab : menurut saya method restock() memiliki satu parameter berupa bilangan in
 6. Commit dan push kode program ke Github
 <br><br><br><br>
 
-## Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
+# Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
 
 ![alt text](image-2.png)
 <br>
@@ -53,4 +53,34 @@ Object yang dihasilkan bernama "bk1".
 2. Bagaimana cara mengakses atribut dan method dari suatu objek?<br>
 Jawab : dengan menggunakan nama objek diikuti dengan tanda titik (.) dan diikuti dengan nama atribut atau nama method yang ingin diakses.
 3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?<br>
-Jawab : karena ada perubahan pada atribut stok dan harga sebelum pemanggilan kedua. Pada pemanggilan pertama, atribut stok memiliki nilai 13 dan atribut harga memiliki nilai 71000. Setelah pemanggilan terjual(5) dan gantiHarga(60000), nilai atribut stok menjadi 8 dan nilai atribut harga menjadi 60000, sehingga output dari pemanggilan kedua mencerminkan perubahan tersebut.
+Jawab : karena ada perubahan pada atribut stok dan harga sebelum pemanggilan kedua. Pada pemanggilan pertama, atribut stok memiliki nilai 13 dan atribut harga memiliki nilai 71000. Setelah pemanggilan terjual(5) dan gantiHarga(60000), nilai atribut stok menjadi 8 dan nilai atribut harga menjadi 60000, sehingga output dari pemanggilan kedua mencerminkan perubahan tersebut.<br>
+
+# Percobaan 3 : Membuat Konstruktor
+
+Ini adalah modifikasi dalam class buku
+![alt text](image-3.png)<br>
+Ini adalah modifikasi dalam class BukuMain
+![alt text](image-4.png)<br>
+
+## Pertanyaan
+
+1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk 
+mendeklarasikan konstruktor berparameter!<br>
+Jawab : ![alt text](image-5.png)
+2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?<br>
+Jawab : Pada baris program tersebut, dilakukan proses instansiasi objek bk2 dari class Buku dengan menggunakan konstruktor berparameter. Nilai-nilai "Self Reward", "Maheera Ayesha", 160, 29, dan 59000 akan diteruskan sebagai argumen ke konstruktor untuk menginisialisasi atribut judul, pengarang, halaman, stok, dan harga dari objek bk2.
+3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana 
+hasilnya? Jelaskan mengapa hasilnya demikian!<br>
+Jawab : Jika konstruktor default pada class Buku dihapus, maka compile error akan terjadi saat mencoba membuat objek Buku tanpa konstruktor default. Hal ini terjadi karena compiler akan mencoba secara otomatis menggunakan konstruktor default ketika tidak ada konstruktor lain yang dapat digunakan.
+![alt text](image-6.png)
+4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses 
+secara berurutan? Jelaskan alasannya!<br>
+Jawab : Tidak, method di dalam class Buku tidak harus diakses secara berurutan karena setiap method dalam class Buku dapat dipanggil secara terpisah sesuai dengan kebutuhan program dan tidak ada ketergantungan urutan antara pemanggilan method-method tersebut.
+5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor 
+berparameter dari class Buku!<br>
+Jawab : ![alt text](image-7.png)
+6. Commit dan push kode program ke Github<br>
+
+# Latihan Praktikum
+
+
