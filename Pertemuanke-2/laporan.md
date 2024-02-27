@@ -44,7 +44,7 @@ Jawab : menurut saya method restock() memiliki satu parameter berupa bilangan in
 
 # Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
 
-Ini adalah hasil dari kode programnya
+Ini adalah hasil dari kode programnya<br>
 ![alt text](image-2.png)
 <br>
 
@@ -70,7 +70,8 @@ Ini adalah modifikasi dalam class BukuMain
 
 1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk 
 mendeklarasikan konstruktor berparameter!<br>
-Jawab : ![alt text](image-5.png)
+Jawab : <br>
+ ![alt text](image-5.png)
 2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?<br>
 Jawab : Pada baris program tersebut, dilakukan proses instansiasi objek bk2 dari class Buku dengan menggunakan konstruktor berparameter. Nilai-nilai "Self Reward", "Maheera Ayesha", 160, 29, dan 59000 akan diteruskan sebagai argumen ke konstruktor untuk menginisialisasi atribut judul, pengarang, halaman, stok, dan harga dari objek bk2.
 3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana 
@@ -89,13 +90,13 @@ Jawab : ![alt text](image-8.png)
 
 1.  Pada class Buku yang telah dibuat, tambahkan tiga method yaitu hitungHargaTotal(),
 hitungDiskon(), dan hitungHargaBayar()<br>
-Jawab :![alt text](image-10.png)
-Ini adalah hasil dari Outputnya
+Jawab :![alt text](image-10.png)<br>
+Ini adalah hasil dari Outputnya<br>
 ![alt text](image-11.png)
-2. Buat program berdasarkan class diagram berikut ini!
+2. Buat program berdasarkan class diagram berikut ini!<br>
 ![alt text](image-12.png)<br>
-Jawab :
+Jawab :<br>
 ![alt text](image-13.png)
-![alt text](image-14.png)
+![alt text](image-14.png)<br>
 Ini adalah hasil dari Outputnya<br>
 ![alt text](image-15.png)
