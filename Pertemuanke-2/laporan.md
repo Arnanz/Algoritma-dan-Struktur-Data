@@ -87,4 +87,15 @@ Jawab : ![alt text](image-8.png)
 
 # Latihan Praktikum
 
-
+1.  Pada class Buku yang telah dibuat, tambahkan tiga method yaitu hitungHargaTotal(),
+hitungDiskon(), dan hitungHargaBayar()<br>
+Jawab :![alt text](image-10.png)
+Ini adalah hasil dari Outputnya
+![alt text](image-11.png)
+2. Buat program berdasarkan class diagram berikut ini!
+![alt text](image-12.png)<br>
+Jawab :
+![alt text](image-13.png)
+![alt text](image-14.png)
+Ini adalah hasil dari Outputnya<br>
+![alt text](image-15.png)

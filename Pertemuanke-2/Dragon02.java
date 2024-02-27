@@ -1,44 +1,60 @@
-public class Dragon02 {
-        int x, y, width, height;
-    
-        void moveLeft() {
-            if (x > 0) {
-                x--;
-            } else {
-                detectCollision();
-            }
-        }
-    
-        void moveRight() {
-            if (x < width) {
-                x++;
-            } else {
-                detectCollision();
-            }
-        }
-    
-        void moveUp() {
-            if (y > 0) {
-                y--;
-            } else {
-                detectCollision();
-            }
-        }
-    
-        void moveDown() {
-            if (y < height) {
-                y++;
-            } else {
-                detectCollision();
-            }
-        }
-    
-        void printPosition() {
-            System.out.println("Dragon Position - x: " + x + ", y: " + y);
-        }
-    
-        void detectCollision() {
-            System.out.println("Game Over");
+class Dragon {
+    int x, y, width, height;
+
+    Dragon(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+    void moveLeft() {
+        x--;
+        if (x < 0) {
+            detectCollision();
         }
     }
 
+    void moveRight() {
+        x++;
+        if (x > width) {
+            detectCollision();
+        }
+    }
+
+    void moveUp() {
+        y--;
+        if (y < 0) {
+            detectCollision();
+        }
+    }
+
+    void moveDown() {
+        y++;
+        if (y > height) {
+            detectCollision();
+        }
+    }
+
+    void printPosition() {
+        System.out.println("Posisi Dragon: (" + x + ", " + y + ")");
+    }
+
+    void detectCollision() {
+        System.out.println("Game Over");
+    }
+}
+
+public class Dragon02 {
+    public static void main(String[] args) {
+        Dragon dragon = new Dragon(5, 5, 10, 10);
+
+        dragon.printPosition();
+        dragon.moveLeft();
+        dragon.moveLeft();
+        dragon.moveLeft();
+        dragon.moveLeft();
+        dragon.moveLeft();
+        dragon.moveLeft();
+    }
+}
