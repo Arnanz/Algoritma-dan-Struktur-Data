@@ -267,8 +267,8 @@ Ini adalah main
 ![!\[alt text\](image.png)](img/image12.png)<br>
 Ini adalah class
 ![!\[alt text\](image.png)](img/image13.png)<br>
-Ini adalah hasil dari outputnya
-![!\[alt text\](image.png)](img/image11.png)<br>
+Ini adalah hasil dari outputnya<br>
+![!\[alt text\](image.png)](img/image11.png)
 
 3. Modifikasi program Latihan no.2 di atas, sehingga bisa digunakan untuk menghitung rata-rata IPK, 
 serta menampilkan data mahasiswa dengan IPK terbesar! (gunakan method untuk masing-masing 
