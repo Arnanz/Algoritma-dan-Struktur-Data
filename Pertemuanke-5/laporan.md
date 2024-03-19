@@ -482,7 +482,7 @@ public class MainMobil {
     }
 }
 ```
-Output
+Output<br>
 ![alt text](image-5.png)
 b) top_acceleration terendah menggunakan Divide and Conquer!<br>
 Jawab : Ini adalah kode programnya<br>
@@ -543,7 +543,7 @@ public class MainMobil {
     }
 }
 ```
-Output
+Output<br>
 ![alt text](image-6.png)
 c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force<br>
 Jawab : Ini adalah kode programnya<br>
@@ -608,5 +608,5 @@ public class MainMobil {
     }
 }
 ```
-Output
+Output<br>
 ![alt text](image-7.png)
