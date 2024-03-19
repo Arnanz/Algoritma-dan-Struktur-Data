@@ -439,7 +439,7 @@ public class Mainsum {
     }
 }
 ```
-Output
+Output<br>
 ![alt text](image-3.png)
 # 4.5 : Latihan Praktikum
 1. Sebuah showroom memiliki daftar mobil dengan data sesuai tabel di bawah ini![alt text](image-4.png)<br>
