@@ -442,7 +442,7 @@ public class Mainsum {
 Output
 ![alt text](image-3.png)
 # 4.5 : Latihan Praktikum
-1. Sebuah showroom memiliki daftar mobil dengan data sesuai tabel di bawah ini![alt text](image-4.png)
+1. Sebuah showroom memiliki daftar mobil dengan data sesuai tabel di bawah ini![alt text](image-4.png)<br>
 Tentukan:<br>
 a) top_acceleration tertinggi menggunakan Divide and Conquer!<br>
 Jawab : Ini adalah kode programnya<br>
@@ -483,7 +483,7 @@ public class MainMobil {
 }
 ```
 Output<br>
-![alt text](image-5.png)
+![alt text](image-5.png)<br>
 b) top_acceleration terendah menggunakan Divide and Conquer!<br>
 Jawab : Ini adalah kode programnya<br>
 ```java
@@ -544,7 +544,7 @@ public class MainMobil {
 }
 ```
 Output<br>
-![alt text](image-6.png)
+![alt text](image-6.png)<br>
 c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force<br>
 Jawab : Ini adalah kode programnya<br>
 ```java
