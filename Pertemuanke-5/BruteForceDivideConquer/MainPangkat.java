@@ -3,24 +3,46 @@ import java.util.Scanner;
 public class MainPangkat {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("---------------------------------");
+        System.out.println("========================================");
         System.out.println("Masukkan jumlah elemen yang dihitung: ");
         int elemen = sc.nextInt();
-        Pangkat02[] png02 = new Pangkat02[elemen];
-        for(int i=0; i<elemen; i++){
-            png02[i] = new Pangkat02();
+
+        Pangkat02[] png = new Pangkat02[elemen];
+        for (int i = 0; i < elemen; i++) {
             System.out.println("Masukkan nilai yang hendak dipangkatkan: ");
-            png02[i].nilai = sc.nextInt();
+            int nilai = sc.nextInt();
             System.out.println("Masukkan nilai pemangkat: ");
-            png02[i].Pangkat02 = sc.nextInt();
+            int pangkat = sc.nextInt();
+            png[i] = new Pangkat02(nilai, pangkat);
         }
-        System.out.println("HASIL PANGKAT - BRUTE FORCE");
-        for(int i=0; i<elemen; i++){
-            System.out.println("Hasil dari "+png02[i].nilai+"Pangkat"+png02[i].Pangkat02+"adalah"+png02[i].pangkatBF(png02[i].nilai, png02[i].Pangkat02));
-        }
-        System.out.println("HASIL PANGKAT - DIVIDE AND CONQUER");
-        for(int i=0; i<elemen; i++){
-            System.out.println("Hasil dari "+ png02[i].nilai+"Pangkat"+png02[i].Pangkat02+"adalah"+png02[i].pangkatDC(png02[i].nilai, png02[i].Pangkat02));
+
+        System.out.println("Pilih metode:");
+        System.out.println("1. Brute Force");
+        System.out.println("2. Divide and Conquer");
+        System.out.print("Pilihan Anda: ");
+        int pilihan = sc.nextInt();
+
+        switch (pilihan) {
+            case 1:
+                System.out.println("HASIL PANGKAT - BRUTE FORCE");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Hasil dari "
+                            + png[i].nilai + " pangkat "
+                            + png[i].pangkat + " adalah "
+                            + png[i].pangkatBF(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            case 2:
+                System.out.println("HASIL PANGKAT - DIVIDE AND CONQUER");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Hasil dari "
+                            + png[i].nilai + " pangkat "
+                            + png[i].pangkat + " adalah "
+                            + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            default:
+                System.out.println("Pilihan tidak valid.");
         }
     }
 }

@@ -162,15 +162,136 @@ Output<br>
 
 ## Pertanyaan
 1. Jelaskan mengenai perbedaan 2 method yang dibuat yaitu PangkatBF() dan PangkatDC()!<br>
-Jawab :
+Jawab :<br>
+pangkatBF() menggunakan pendekatan iteratif loop 'for' untuk melakukan perkalian sebanyak 'n' kali secara langsung.<br>  
+pangkatDC() menggunakan pendekatan rekursif yang membagi masalah perpangkatan menjadi sub-masalah yang lebih kecil dan melakukan combine hasil diakhir.
+
 2. Apakah tahap combine sudah termasuk dalam kode tersebut?Tunjukkan!<br>
-Jawab :
+Jawab : Iya, karena tahap combine terjadi ketika hasil dari dua penggunaan rekursif pangkatDC(a, n/2) dikalikan. Jika n adalah bilangan ganjil maka hasil tersebut juka dikalikan dengan a.
+```java
+if (n % 2 == 1) {
+                return (pangkatDC(a, n / 2) * pangkatDC(a, n / 2) * a);
+            } else {
+                return (pangkatDC(a, n / 2) * pangkatDC(a, n / 2));
+            }
+```
 3. Modifikasi kode program tersebut, anggap proses pengisian atribut dilakukan dengan 
 konstruktor.<br>
-Jawab :
+Jawab :<br>
+```java
+public class Pangkat02 {
+    public int nilai, pangkat;
+    public Pangkat02(int nilai, int pangkat) {
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
+    int pangkatBF(int a, int n) {
+        int hasil = 1;
+        for (int i = 0; i < n; i++) {
+            hasil *= a;
+        }
+        return hasil;
+    }
+    int pangkatDC(int a, int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            if (n % 2 == 1) {
+                return (pangkatDC(a, n / 2) * pangkatDC(a, n / 2) * a);
+            } else {
+                return (pangkatDC(a, n / 2) * pangkatDC(a, n / 2));
+            }
+        }
+    }
+}
+```
+```java
+import java.util.Scanner;
+
+public class MainPangkat {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("====================================");
+        System.out.print("Masukkan jumlah elemen yang dihitung: ");
+        int elemen = sc.nextInt();
+
+        Pangkat02[] png20 = new Pangkat02[elemen];
+        for (int i = 0; i < elemen; i++) {
+            System.out.println("Masukkan nilai yang hendak dipangkatkan: ");
+            int nilai = sc.nextInt();
+            System.out.println("Masukkan nilai pemangkat: ");
+            int pangkat = sc.nextInt();
+            png20[i] = new Pangkat02(nilai, pangkat);
+        }
+
+        System.out.println("HASIL PANGKAT - BRUTE FORCE");
+        for (int i = 0; i < elemen; i++) {
+            System.out.println("Hasil dari " + png20[i].nilai + " pangkat " + png20[i].pangkat + " adalah "
+                    + png20[i].pangkatBF(png20[i].nilai, png20[i].pangkat));
+        }
+
+        System.out.println("HASIL PANGKAT - DIVIDE AND CONQUER");
+        for (int i = 0; i < elemen; i++) {
+            System.out.println("Hasil dari " + png20[i].nilai + " pangkat " + png20[i].pangkat + " adalah "
+                    + png20[i].pangkatDC(png20[i].nilai, png20[i].pangkat));
+        }
+    }
+}
+```
 4. Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan 
 switch-case<br>
 Jawab :
+```java
+import java.util.Scanner;
+
+public class MainPangkat {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("========================================");
+        System.out.println("Masukkan jumlah elemen yang dihitung: ");
+        int elemen = sc.nextInt();
+
+        Pangkat02[] png = new Pangkat02[elemen];
+        for (int i = 0; i < elemen; i++) {
+            System.out.println("Masukkan nilai yang hendak dipangkatkan: ");
+            int nilai = sc.nextInt();
+            System.out.println("Masukkan nilai pemangkat: ");
+            int pangkat = sc.nextInt();
+            png[i] = new Pangkat02(nilai, pangkat);
+        }
+
+        System.out.println("Pilih metode:");
+        System.out.println("1. Brute Force");
+        System.out.println("2. Divide and Conquer");
+        System.out.print("Pilihan Anda: ");
+        int pilihan = sc.nextInt();
+
+        switch (pilihan) {
+            case 1:
+                System.out.println("HASIL PANGKAT - BRUTE FORCE");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Hasil dari "
+                            + png[i].nilai + " pangkat "
+                            + png[i].pangkat + " adalah "
+                            + png[i].pangkatBF(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            case 2:
+                System.out.println("HASIL PANGKAT - DIVIDE AND CONQUER");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Hasil dari "
+                            + png[i].nilai + " pangkat "
+                            + png[i].pangkat + " adalah "
+                            + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            default:
+                System.out.println("Pilihan tidak valid.");
+        }
+    }
+}
+```
 
 
 # 4.4 : Menghitung Sum Array dengan Algoritma Brute Force dan Divide and Conquer
@@ -180,26 +301,25 @@ class
 public class Sum02 {
     int elemen;
     double keuntungan[], total;
-
-    Sum02(int elemen){
+    Sum02(int elemen) {
         this.elemen = elemen;
         this.keuntungan = new double[elemen];
         this.total = 0;
     }
-    double totalBF(double arr[]){
-        for(int i=0; i<elemen; i++){
+    double totalBF(double arr[]) {
+        for (int i = 0; i < elemen; i++) {
             total = total + arr[i];
         }
         return total;
     }
-    double totalDC(double arr[], int l, int r){
-        if(l == r){
+    double totalDC(double arr[], int l, int r) {
+        if (l == r) {
             return arr[l];
-        }else if(l < r){
-            int mid = (l+r)/2;
-            double lsum = totalDC(arr, l, mid-l);
-            double rsum = totalDC(arr, mid+1, r);
-            return lsum+rsum;
+        } else if (l < r) {
+            int mid = (l + r) / 2;
+            double lsum = totalDC(arr, l, mid);
+            double rsum = totalDC(arr, mid + 1, r);
+            return lsum + rsum;
         }
         return 0;
     }
@@ -210,51 +330,283 @@ main
 import java.util.Scanner;
 public class Mainsum {
     public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("---------------------------------");
-    System.out.println("ProgramMenghitung Keuntungan Total (Satuan Juta.Misal 5.9)");
-    System.out.println("Masukkan jumlah bulan : ");
-    int elm = sc.nextInt();
-    Sum02 sm = new Sum02(elm);
-    System.out.println("---------------------------------");
-    for (int i = 0; i < sm.elemen; i++) {
-        System.out.println("Masukkan untung bulan ke-" + (i + 1) + " = ");
-        sm.keuntungan[i] = sc.nextDouble();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("============================================================");
+        System.out.println("Program Menghitung Keuntungan Total (Satuan Juta, Misal 5,9)");
+        System.out.print("Masukkan jumlah bulan : ");
+        int elm = sc.nextInt();
+        Sum02 sm = new Sum02(elm);
+        System.out.println("============================================================");
+        for (int i = 0; i < sm.elemen; i++) {
+            System.out.print("Masukkan untung bulan ke - " + (i + 1) + " = ");
+            sm.keuntungan[i] = sc.nextDouble();
+        }
+        System.out.println("============================================================");
+        System.out.println("Algoritma Brute Force");
+        System.out.println(
+                "Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = " + sm.totalBF(sm.keuntungan));
+        System.out.println("============================================================");
+        System.out.println("Algoritma Divide Conquer");
+        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = "
+                + sm.totalDC(sm.keuntungan, 0, sm.elemen - 1));
     }
-    System.out.println("---------------------------------");
-    System.out.println("Algoritma Brute Force");
-    System.out.println("Total Keuntungan perusahaan selama" + sm.elemen + " bulan adalah = " + sm.totalBF(sm.keuntungan));
-    System.out.println("---------------------------------");
-    System.out.println("Algoritma Divide and Conquer");
-    System.out.println("Total Keuntungan perusahaan selama" + sm.elemen + " bulan adalah = " + sm.totalDC(sm.keuntungan, 0, sm.elemen-1));
-}
 }
 ```
 Output<br>
-
+![alt text](image-2.png)<br>
 ## Pertanyaan
 1. Mengapa terdapat formulasi return value berikut?Jelaskan<br>
-Jawab :
+```java
+return lsum+rsum+arr[mid];
+```
+Jawab : baris kode tersebut digunakan untuk menambahkan total semua nilai dari 'lsum' yang merupakan total dari sub-array disebelah kiri, 'rsum' adalah total dari sub-array di sebelah kanan, dan 'arr[mid]' adalah elemen tengah dari array.<br>
 2. Kenapa dibutuhkan variable mid pada method TotalDC()?<br>
-Jawab :
+Jawab : Variabel 'mid' digunakan untuk membagi sub-array menjadi 2 bagian yang sama besar yaitu: 'lsum' untuk kiri dan 'rsum' untuk kanan.<br>
 3. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja. 
 Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa 
 perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan 
 dengan program!<br>
-Jawab :
+Jawab : Ini adalah kode programnya <br>
+```java
+public class Sum02 {
+    int elemen;
+    double[] keuntungan;
+    double total;
+    Sum02(int elemen) {
+        this.elemen = elemen;
+        this.keuntungan = new double[elemen];
+        this.total = 0;
+    }
+    public void setKeuntungan(double[] keuntungan) {
+        this.keuntungan = keuntungan;
+    }
+    double totalBF() {
+        total = 0;
+        for (int i = 0; i < elemen; i++) {
+            total = total + keuntungan[i];
+        }
+        return total;
+    }
+    double totalDC(int l, int r) {
+        if (l == r) {
+            return keuntungan[l];
+        } else if (l < r) {
+            int mid = (l + r) / 2;
+            double lsum = totalDC(l, mid);
+            double rsum = totalDC(mid + 1, r);
+            return lsum + rsum;
+        }
+        return 0;
+    }
+}
+```
+```java
+import java.util.Scanner;
 
+public class Mainsum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("============================================================");
+        System.out.println("Program Menghitung Keuntungan Total (Satuan Juta, Misal 5,9)");
+        System.out.print("Masukkan jumlah perusahaan: ");
+        int jumlahPerusahaan = sc.nextInt();
+        System.out.print("Masukkan jumlah bulan: ");
+        int jumlahBulan = sc.nextInt();
+
+        double[][] keuntunganPerusahaan = new double[jumlahPerusahaan][jumlahBulan];
+
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            System.out.println("============================================================");
+            System.out.println("Masukkan data keuntungan untuk Perusahaan " + (i + 1) + ":");
+            for (int j = 0; j < jumlahBulan; j++) {
+                System.out.print("Masukkan untung bulan ke-" + (j + 1) + " = ");
+                keuntunganPerusahaan[i][j] = sc.nextDouble();
+            }
+        }
+
+        for (int i = 0; i < jumlahPerusahaan; i++) {
+            Sum02 sm = new Sum02(jumlahBulan);
+            sm.setKeuntungan(keuntunganPerusahaan[i]);
+            System.out.println("============================================================");
+            System.out.println("Perusahaan " + (i + 1));
+            System.out.println("Algoritma Brute Force");
+            System.out.println("Total keuntungan perusahaan selama " + jumlahBulan + " bulan adalah = "
+                    + sm.totalBF());
+            System.out.println("Algoritma Divide Conquer");
+            System.out.println("Total keuntungan perusahaan selama " + jumlahBulan + " bulan adalah = "
+                    + sm.totalDC(0, jumlahBulan - 1));
+        }
+    }
+}
+```
+Output
+![alt text](image-3.png)
 # 4.5 : Latihan Praktikum
-1. Sebuah showroom memiliki daftar mobil dengan data sesuai tabel di bawah ini
-merk tipe tahun top_acceleration top_power
-BMW M2 Coupe 2016 6816 728
-Ford Fiesta ST 2014 3921 575
-Nissan 370Z 2009 4360 657
-Subaru BRZ 2014 4058 609
-Subaru Impreza WRX STI 2013 6255 703
-Toyota AE86 Trueno 1986 3700 553
-Toyota 86/GT86 2014 4180 609
-Volkswagen Golf GTI 2014 4180 631
-Tentukan:
-a) top_acceleration tertinggi menggunakan Divide and Conquer!
-b) top_acceleration terendah menggunakan Divide and Conquer!
-c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force
+1. Sebuah showroom memiliki daftar mobil dengan data sesuai tabel di bawah ini![alt text](image-4.png)
+Tentukan:<br>
+a) top_acceleration tertinggi menggunakan Divide and Conquer!<br>
+Jawab : Ini adalah kode programnya<br>
+```java
+public class DaftarMobil02 {
+    String merk[] = { "BMW", "Ford", "Nissan", "Subaru", "Toyota", "Volkswagen" };
+    String tipe[] = { "M2 Coupe", "Fiesta ST", "370Z", "BRZ", "Impreza WRX STI", "AE86 Trueno", "86/GT86", "Golf GTI" };
+    int tahun[] = { 2016, 2014, 2009, 2014, 2013, 1986, 2014, 2014 };
+    int topAcceleration[] = { 6816, 3921, 4360, 4058, 6255, 3700, 4180, 4180 };
+    int topPower[] = { 728, 575, 657, 609, 703, 553, 609, 631 };
+    int maxAcceleration(int arr[], int l, int r) {
+        if (l == r) {
+            return arr[l];
+        } else {
+            int mid = (l + r) / 2;
+            int left = maxAcceleration(arr, l, mid);
+            int right = maxAcceleration(arr, mid + 1, r);
+
+            int maxAcceleration;
+            if (left > right) {
+                maxAcceleration = left;
+            } else {
+                maxAcceleration = right;
+            }
+            return maxAcceleration;
+        }
+    }
+}
+```
+``` java
+public class MainMobil {
+    public static void main(String[] args) {
+        DaftarMobil02 outputMobil = new DaftarMobil02();
+        System.out.println("=====================================================");
+        System.out.println("Mobil dengan top Accaleration tertinggi adalah "
+                + outputMobil.maxAcceleration(outputMobil.topAcceleration, 0, outputMobil.topAcceleration.length - 1));
+    }
+}
+```
+Output
+![alt text](image-5.png)
+b) top_acceleration terendah menggunakan Divide and Conquer!<br>
+Jawab : Ini adalah kode programnya<br>
+```java
+public class DaftarMobil02 {
+    String merk[] = { "BMW", "Ford", "Nissan", "Subaru", "Toyota", "Volkswagen" };
+    String tipe[] = { "M2 Coupe", "Fiesta ST", "370Z", "BRZ", "Impreza WRX STI", "AE86 Trueno", "86/GT86", "Golf GTI" };
+    int tahun[] = { 2016, 2014, 2009, 2014, 2013, 1986, 2014, 2014 };
+    int topAcceleration[] = { 6816, 3921, 4360, 4058, 6255, 3700, 4180, 4180 };
+    int topPower[] = { 728, 575, 657, 609, 703, 553, 609, 631 };
+
+    int maxAcceleration(int arr[], int l, int r) {
+        if (l == r) {
+            return arr[l];
+        } else {
+            int mid = (l + r) / 2;
+            int left = maxAcceleration(arr, l, mid);
+            int right = maxAcceleration(arr, mid + 1, r);
+
+            int maxAcceleration;
+            if (left > right) {
+                maxAcceleration = left;
+            } else {
+                maxAcceleration = right;
+            }
+            return maxAcceleration;
+        }
+    }
+
+    int minAcceleration(int arr[], int l, int r) {
+        if (l == r) {
+            return arr[l];
+        } else {
+            int mid = (l + r) / 2;
+            int left = minAcceleration(arr, l, mid);
+            int right = minAcceleration(arr, mid + 1, r);
+
+            int minAcceleration;
+            if (left < right) {
+                minAcceleration = left;
+            } else {
+                minAcceleration = right;
+            }
+            return minAcceleration;
+        }
+    }
+}
+```
+```java
+public class MainMobil {
+    public static void main(String[] args) {
+        DaftarMobil02 outputMobil = new DaftarMobil02();
+        System.out.println("=====================================================");
+        System.out.println("Mobil dengan top Accaleration tertinggi adalah "
+                + outputMobil.maxAcceleration(outputMobil.topAcceleration, 0, outputMobil.topAcceleration.length - 1));
+        System.out.println("Mobil dengan top Accaleration terendah adalah "
+                + outputMobil.minAcceleration(outputMobil.topAcceleration, 0, outputMobil.topAcceleration.length - 1));
+    }
+}
+```
+Output
+![alt text](image-6.png)
+c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force<br>
+Jawab : Ini adalah kode programnya<br>
+```java
+public class DaftarMobil02 {
+    String merk[] = { "BMW", "Ford", "Nissan", "Subaru", "Toyota", "Volkswagen" };
+    String tipe[] = { "M2 Coupe", "Fiesta ST", "370Z", "BRZ", "Impreza WRX STI", "AE86 Trueno", "86/GT86", "Golf GTI" };
+    int tahun[] = { 2016, 2014, 2009, 2014, 2013, 1986, 2014, 2014 };
+    int topAcceleration[] = { 6816, 3921, 4360, 4058, 6255, 3700, 4180, 4180 };
+    int topPower[] = { 728, 575, 657, 609, 703, 553, 609, 631 };
+    int maxAcceleration(int arr[], int l, int r) {
+        if (l == r) {
+            return arr[l];
+        } else {
+            int mid = (l + r) / 2;
+            int left = maxAcceleration(arr, l, mid);
+            int right = maxAcceleration(arr, mid + 1, r);
+            int maxAcceleration;
+            if (left > right) {
+                maxAcceleration = left;
+            } else {
+                maxAcceleration = right;
+            }
+            return maxAcceleration;
+        }
+    }
+    int minAcceleration(int arr[], int l, int r) {
+        if (l == r) {
+            return arr[l];
+        } else {
+            int mid = (l + r) / 2;
+            int left = minAcceleration(arr, l, mid);
+            int right = minAcceleration(arr, mid + 1, r);
+            int minAcceleration;
+            if (left < right) {
+                minAcceleration = left;
+            } else {
+                minAcceleration = right;
+            }
+            return minAcceleration;
+        }
+    }
+    double rataPower() {
+        double totalPower = 0;
+        for (int i = 0; i < topPower.length; i++) {
+            totalPower += topPower[i];
+        }
+        return totalPower / topPower.length;
+    }
+}
+```
+```java
+public class MainMobil {
+    public static void main(String[] args) {
+        DaftarMobil02 outputMobil = new DaftarMobil02();
+        System.out.println("=====================================================");
+        System.out.println("Mobil dengan top Accaleration tertinggi adalah "
+                + outputMobil.maxAcceleration(outputMobil.topAcceleration, 0, outputMobil.topAcceleration.length - 1));
+        System.out.println("Mobil dengan top Accaleration terendah adalah "
+                + outputMobil.minAcceleration(outputMobil.topAcceleration, 0, outputMobil.topAcceleration.length - 1));
+        System.out.println("Rata-rata top power adalah " + outputMobil.rataPower());
+    }
+}
+```
+Output
+![alt text](image-7.png)
