@@ -94,8 +94,8 @@ public class main02 {
 ```
 Output<br>
 
-![!\[alt text\](image-3.png)](Pertemuanke6/img/image-3.png)<br>
-![!\[alt text\](image-1.png)](Pertemuanke6/img/image-1.png)<br>
+![!\[!\\[alt text\\](image-3.png)\](Pertemuanke6/img/image-3.png)](img/image-3.png)<br>
+![!\[!\\[alt text\\](image-1.png)\](Pertemuanke6/img/image-1.png)](img/image-1.png)<br>
 
 ## Pertanyaan
 1. Terdapat di method apakah proses bubble sort?<br>
@@ -202,8 +202,8 @@ public class main02 {
 }
 ```
 Output<br>
-![!\[alt text\](image-2.png)](Pertemuanke6/img/image-2.png)<br>
-![!\[alt text\](image-4.png)](Pertemuanke6/img/image-4.png)<br>
+![!\[!\\[alt text\\](image-2.png)\](Pertemuanke6/img/image-2.png)](img/image-2.png)<br>
+![!\[!\\[alt text\\](image-4.png)\](Pertemuanke6/img/image-4.png)](img/image-4.png)<br>
 
 ## Pertanyaan
 Di dalam method selection sort, terdapat baris program seperti di bawah ini:<br>
@@ -311,8 +311,8 @@ public class main02 {
 }
 ```
 Output<br>
-![!\[alt text\](image-5.png)](Pertemuanke6/img/image-5.png)<br>
-![!\[alt text\](image-6.png)](Pertemuanke6/img/image-6.png)<br>
+![!\[!\\[alt text\\](image-5.png)\](Pertemuanke6/img/image-5.png)](img/image-5.png)<br>
+![!\[!\\[alt text\\](image-6.png)\](Pertemuanke6/img/image-6.png)](img/image-6.png)<br>
 ## Pertanyaan
 Ubahlah fungsi pada InsertionSort sehingga fungsi ini dapat melaksanakan proses sorting dengan cara descending.
 Modifikasi ke descending<br>
@@ -330,14 +330,14 @@ void insertionSort() {
     }
 ```
 Output<br>
-![!\[alt text\](image-7.png)](Pertemuanke6/img/image-7.png)
+![!\[!\\[alt text\\](image-7.png)\](Pertemuanke6/img/image-7.png)](img/image-7.png)
 # Latihan Praktikum
 Sebuah platform travel yang menyediakan layanan pemesanan kebutuhan travelling sedang mengembangkan backend untuk sistem pemesanan/reservasi akomodasi (penginapan), salah satu fiturnya adalah menampilkan daftar penginapan yang tersedia berdasarkan pilihan filter yang diinginkan user. Daftar penginapan ini harus dapat disorting berdasarkan
 
 1. Harga dimulai dari harga termurah ke harga tertinggi.
 2. Rating bintang penginapan dari bintang tertinggi (5) ke terendah (1)<br>
 Buatlah proses sorting data untuk kedua filter tersebut dengan menggunakan algoritma bubble sort dan selection sort.<br>
-![!\[alt text\](image-8.png)<br>](Pertemuanke6/img/image-8.png)
+![!\[!\\[alt text\\](image-8.png)<br>\](Pertemuanke6/img/image-8.png)](img/image-8.png)<br>
 Jawab : Ini adalah codenya<br>
 ```java
 public class Hotel02 {
@@ -439,6 +439,6 @@ public class Mainhotel02 {
 }
 ```
 Output<br>
-![!\[alt text\](image-10.png)](Pertemuanke6/img/image-10.png)<br>
-![!\[alt text\](image-11.png)](Pertemuanke6/img/image-11.png)<br>
-![!\[alt text\](image-12.png)](Pertemuanke6/img/image-12.png)<br>
+![!\[!\\[alt text\\](image-10.png)\](Pertemuanke6/img/image-10.png)](img/image-10.png)<br>
+![!\[!\\[alt text\\](image-11.png)\](Pertemuanke6/img/image-11.png)](img/image-11.png)<br>
+![!\[!\\[alt text\\](image-12.png)\](Pertemuanke6/img/image-12.png)](img/image-12.png)<br>
