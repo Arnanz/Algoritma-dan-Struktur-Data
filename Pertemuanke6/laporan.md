@@ -115,7 +115,7 @@ jawab: untuk menukar posisi kedua elemen dalam array listMhs. Penukaran posisi d
 for (int i = 0; i < listMhs.length - 1; i++) {
     for (int j = 1; j < listMhs.length - i; j++) {
 ```
-a. Apakah perbedaan antara kegunaan perulangan i dan perulangan j?
+a. Apakah perbedaan antara kegunaan perulangan i dan perulangan j?<br>
 Jawab : perulangan i digunakan untuk mengatur seluruh array listMhs sedangkan j digunakan untuk membandingkan dan menukar pasangan elemen dalam array listMhs<br>
 b. Mengapa syarat dari perulangan i adalah i<listMhs.length-1 ?
 Jawab : pada setiap iterasi i tidak perlu membandingkan elemen terakhir dengan elemen lainnya. Karena pada setiap iterasi, elemen terbesar telah dipindahkan ke posisi yang benar di akhir array, sehingga tidak perlu dibandingkan lagi. <br>
