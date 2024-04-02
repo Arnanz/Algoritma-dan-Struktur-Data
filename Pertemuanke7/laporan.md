@@ -167,7 +167,7 @@ tersebut pada class BukuMain seperti gambar berikut :!
 ```java
 Buku02 dataBuku = data.FindBuku(cari);
         dataBuku.tampilDataBuku();
-```<br>
+```
 Jawab : dengan menambahkan kode ini pada class PencarianBuku02
 ```java
 public Buku02 FindBuku(int cari) {
@@ -253,7 +253,7 @@ public int FindBinarySearch(int cari, int left, int right) {
  return -1;
 }
 ```
-Output
+Output<br>
 ![!\[alt text\](image.png)](img/image9.png)
 
 ## Percobaan 3
@@ -502,7 +502,7 @@ public class Bukumain02 {
 }
 }
 ```
-Output
+Output<br>
 ![!\[alt text\](<Screenshot 2024-04-02 082548.png>)](img/image11.png)
 ![!\[alt text\](<Screenshot 2024-04-02 082603.png>)](img/image12.png)
 ![!\[alt text\](image.png)](img/image13.png)<br>
@@ -785,4 +785,4 @@ public class Bukumain02 {
 ```
 
 Output<br>
-![alt text](image.png)
+![!\[alt text\](image.png)](img/image15.png)
