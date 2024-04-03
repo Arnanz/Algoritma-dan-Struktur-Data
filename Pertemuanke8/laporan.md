@@ -138,8 +138,8 @@ public class Utama02 {
 }
 ```
 Output<br>
-![!\[alt text\](<Screenshot 2024-04-03 112356.png>)](Pertemuanke8/img/image.png)
-![alt text](Pertemuanke8/img/image1.png)
+![!\[!\\[alt text\\](<Screenshot 2024-04-03 112356.png>)\](Pertemuanke8/img/image.png)](img/image.png)
+![!\[alt text\](Pertemuanke8/img/image1.png)](img/image1.png)
 
 ## Pertanyaan
 1. . Lakukan perbaikan pada kode program, sehingga keluaran yang dihasilkan sama dengan verifikasi
@@ -224,7 +224,7 @@ public class Utama02 {
 }
 ```
 Output<br>
-![alt text](Pertemuanke8/img/image2.png)
+![!\[alt text\](Pertemuanke8/img/image2.png)](img/image2.png)
 # Percobaan 2 : Konversi Kode Barang ke Biner 
 Ini adalah SS dari kode programnya dan sesuai dengan hasil percobaan<br>
 ```java
@@ -395,7 +395,7 @@ public class Utama02 {
 }
 ```
 Output<br>
-![!\[alt text\](image.png)](Pertemuanke8/img/image3.png)
+![!\[!\\[alt text\\](image.png)\](Pertemuanke8/img/image3.png)](img/image3.png)
 ## Pertanyaan
 1. . Pada method konversiDesimalKeBiner, ubah kondisi perulangan menjadi while (kode != 0),
 bagaimana hasilnya? Jelaskan alasannya!<br>
@@ -505,7 +505,7 @@ public class PostfixMain02 {
 }
 ```
 Output<br>
-![!\[alt text\](image.png)](Pertemuanke8/img/image4.png)
+![!\[!\\[alt text\\](image.png)\](Pertemuanke8/img/image4.png)](img/image4.png)
 ## Pertanyaan
 1. Pada method derajat, mengapa return value beberapa case bernilai sama? Apabila return
 value diubah dengan nilai berbeda-beda setiap case-nya, apa yang terjadi?<br>
@@ -739,5 +739,5 @@ public class Utama02 {
 }
 ```
 Output<br>
-![!\[alt text\](image.png)](Pertemuanke8/img/image5.png)
-![alt text](Pertemuanke8/img/image6.png)
+![!\[!\\[alt text\\](image.png)\](Pertemuanke8/img/image5.png)](img/image5.png)
+![!\[alt text\](Pertemuanke8/img/image6.png)](img/image6.png)
