@@ -15,7 +15,8 @@
 
 # SOAL
 ## Data nilai angka
-![UTS/img/Screenshot (1).png](<img/Screenshot (1).png>)
+![UTS/img/Screenshot (1).png](<img/Screenshot (1).png>)<br>
+<br>
 Implementasikan pengurutan dan pencarian berdasarkan kasus yang diberikan!<br>
 Metode pencarian dan pengurutan mengikuti ketentuan yang tercantum!<br>
  Simulasi pengurutan dilakukan secara ascending dan descending!
