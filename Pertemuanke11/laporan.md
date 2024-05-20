@@ -627,6 +627,6 @@ public class SLLMain02 {
 ```
 <br>Output<br>
 
-![Pertemuanke11/img/image4.png](img/image4.png)
-![Pertemuanke11/img/image5.png](img/image5.png)
-![Pertemuanke11/img/image6.png](img/image6.png)
+![Pertemuanke11/img/image4.png](img/image4.png)<br>
+![Pertemuanke11/img/image5.png](img/image5.png)<br>
+![Pertemuanke11/img/image6.png](img/image6.png)<br>
